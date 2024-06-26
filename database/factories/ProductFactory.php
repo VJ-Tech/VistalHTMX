@@ -19,8 +19,8 @@ class ProductFactory extends Factory
         return [
             'name' => fake()->words(3, true),
             'description' => fake()->sentence,
-            'price' => fake()->randomFloat(2, 0, 1000),
-            'imageURL' => fake()->imageUrl(),
+            'imageURL' => fake()->randomElement(['https://greendroprecycling.com/wp-content/uploads/2017/04/GreenDrop_Station_Aluminum_Can_1.jpg', 'https://www.shutterstock.com/image-illustration/bottle-gel-lotion-beauty-product-260nw-1348122737.jpg']),
+            'price' => fake()->numberBetween(100, 1000)
         ];
     }
 }
